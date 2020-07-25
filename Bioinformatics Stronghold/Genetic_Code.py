@@ -1,0 +1,7 @@
+#Sample dataset:-
+#AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
+
+#output:-
+#MAMAPRTEINSTRING
+
+protein_code = dict()

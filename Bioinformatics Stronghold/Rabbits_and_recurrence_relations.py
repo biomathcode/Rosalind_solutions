@@ -6,7 +6,6 @@ Return: The total number of rabbit pairs that will be present after n months, if
 """
 
 def fibonacci_with_k_children(n, k):
-
     if n == 0 or n == 1:
         value = n
     else:

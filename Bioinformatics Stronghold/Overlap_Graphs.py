@@ -24,3 +24,14 @@ def k_edges(data,k):
             edges.append((v,u))
 
     return edges
+
+if __name__ == "__main__":
+    file_name = input('write the file name')
+    dna_seq = dictionar_seq(file_name)
+    ##print(k_edges(dna_seq, 3))
+    edges = k_edges(dna_seq, 3)
+    n = 0
+    for i in edges:
+        print(edges[n][0], edges[n][1])
+        n += 1
+

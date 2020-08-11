@@ -2,8 +2,10 @@ from Bio import ExPASy
 from Bio import SwissProt
 from Bio import SeqIO
 
-with ExPASy.get_sprot_raw("Q5SLP9") as handle:
-    seq_record = SeqIO.read(handle, "swiss")
+def getgo(id):
+    handle = ExPASy.get_sprot_raw(id)
+    record = SwissProt.read(handle)
+    go = [r[2].split(":")[1] for r in record.cross_references if r[0] == "GO" and  r[2].startswith("P")]
+    print("\n".join(go))
 
-print(dir(seq_record))
-print(seq_record.annotations["keywords"])
+getgo("Q5SLP9")
